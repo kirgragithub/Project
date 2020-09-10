@@ -3,6 +3,12 @@
   hosts: docker-master
   become: yes
   tasks:
+    -name: directory creation
+     file:
+       path: /opt/docker/trainingwale
+       state: directory
+       mode: ‘0755’ 
+
     - name: Copy the war file, dockerfile & stack.yml to docker master server
       copy:
         src: /home/ansadmin/trainingwale/
