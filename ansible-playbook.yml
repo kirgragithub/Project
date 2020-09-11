@@ -29,7 +29,7 @@
         - boto3
         - botocore
         - docker
-       executable: pip-9.0.1
+       executable: pip-3.6
       register: out1
     - debug:
         var: out1
